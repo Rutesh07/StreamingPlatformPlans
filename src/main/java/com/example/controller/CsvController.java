@@ -18,8 +18,9 @@ public class CsvController {
     @Autowired
     private CsvService csvService;
 
+    // API endpoint to get plans filtered by platform
     @GetMapping("/plans")
     public List<StreamingServicePlan> getPlans(@RequestParam String platform) {
-        return csvService.getPlans(platform);  // Return filtered plans by platform
+        return csvService.getPlans(platform);  // Call service to get plans for the specified platform
     }
 }

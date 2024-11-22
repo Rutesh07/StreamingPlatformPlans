@@ -1,7 +1,16 @@
-ServiceName,Plan Name,Price,Features
-Netflix,Standard,$5.99 ,HD
-,Standar Plus,$15.99 ,UHD10
-Prime,Premium,$9.99 ,HD
-Disney,Premium,$9.99 ,HD
-Rakuten,Standard,$10.99 ,Full HD+
-Paramount,Standard Plus,$11.99 ,UHD10
+ServiceName,Plan Name,Price,Annual Price,Features,Simultaneous stream,Download,Ad-free streaming
+Disney,Standard with Ads,$8.99 ,N/A,Video quality up to 1080p Full HD,2,NO,NO
+Disney,Standard,$12.99 ,$129.99 / year,Video quality up to 1080p Full HD,2,YES,YES
+Disney,Premium,$15.99 ,$159.99 / year,4K UHD & HDR,4,YES,YES
+Netflix,Standard with Ads,$5.99 / month,N/A,1080p Full HD,2,NO,NO
+Netflix,Standard,$16.49 / month,N/A,1080p Full HD,2,YES,YES
+Netflix,Premium,$20.99 / month,N/A,4K UHD & HDR,4,YES,YES
+Prime,Standard with Ads,N/A,N/A,Video quality up to 1080p Full HD,2,NO,NO
+Prime,Standard,$8.99 / month,$99 / year,Video quality up to 1080p Full HD,2,YES,YES
+Prime,Premium,$11.99 / month,N/A,4K UHD & HDR,4,YES,YES
+Rakuten,Standard with Ads,$7.99 / month,N/A,N/A,N/A,N/A,N/A
+Rakuten,Standard,$7.99 / month,N/A,HD (720p),1,NO,YES
+Rakuten,Premium,$12.99 / month,N/A,Full HD (1080p),4,YES,YES
+Paramount,Standard with Ads,$6.99 / month,$61.99 / year,1080p Full HD,1,NO,NO
+Paramount,Standard,$10.99 / month,$97.99 / year,1080p Full HD,2,YES,YES
+Paramount,Premium,$13.99 / month,$124.99 / year,4K UHD & HDR10,4,YES,YES

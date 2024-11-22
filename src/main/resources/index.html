@@ -11,8 +11,12 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Company Logo">
-            <h1>Streaming Plans</h1>
+            <h1>WATCHIFY</h1>
+        </div>
+        <h1>Streaming Plans</h1>
+        <div class="header-actions">
+            <input type="text" placeholder="Search plans..." class="search-bar">
+            <button class="explore-btn" onclick="toggleExplorePopup()">Explore</button>
         </div>
     </header>
 
@@ -21,13 +25,24 @@
         <button class="tab active" onclick="renderPlans('Disney')">Disney Hotstar</button>
         <button class="tab" onclick="renderPlans('Netflix')">Netflix</button>
         <button class="tab" onclick="renderPlans('Prime')">Prime Videos</button>
-        <button class="tab" onclick="renderPlans('Rakuten')">Rakuten Viki</button>
+        <button class="tab" onclick="renderPlans('Rakuten')">Rakuten</button>
         <button class="tab" onclick="renderPlans('Paramount')">Paramount+</button>
     </div>
 
     <!-- Dynamic content -->
     <div id="content" class="plans-container">
         <p>Loading plans...</p>
+    </div>
+
+    <!-- Explore Popup -->
+    <div id="explorePopup" class="explore-popup">
+        <ul>
+            <li>Best Plan</li>
+            <li>Text Extractor</li>
+            <li>Search Frequency</li>
+            <li>Page Ranking</li>
+            <li>Frequency Count</li>
+        </ul>
     </div>
 
     <script src="script.js"></script>
