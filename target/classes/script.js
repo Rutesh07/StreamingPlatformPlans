@@ -178,27 +178,6 @@ function handleSearch(event) {
   }
 }
 
-
-
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   document
-//     .getElementById("search-button")
-//     .addEventListener("click", handleSearch);
-
-//   document
-//     .getElementById("search-input")
-//     .addEventListener("keydown", function (event) {
-//       if (event.key === "Enter") handleSearch();
-//     });
-// });
-
-
-
-
-
-
 // Attach event listeners to search bar and search button
 const searchBar = document.querySelector(".search-bar");
 const searchButton = document.querySelector(".search-button");
@@ -259,53 +238,56 @@ function fetchSearchResults(query) {
         "<p>Error fetching search results. Please try again later.</p>";
     });
 
+  function handleAutocomplete(event) {
+    const query = event.target.value;
+    const suggestionsDiv = document.getElementById("suggestions");
 
+    if (query.length < 2) {
+      suggestionsDiv.style.display = "none";
+      return;
+    }
 
-      function handleAutocomplete(event) {
-        const query = event.target.value;
-        const suggestionsDiv = document.getElementById("suggestions");
-    
-        if (query.length < 2) {
-            suggestionsDiv.style.display = "none";
-            return;
+    fetch(`http://localhost:8080/api/autocomplete?query=${query}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.length > 0) {
+          suggestionsDiv.innerHTML = data
+            .map(
+              (item) =>
+                `<div onclick="selectSuggestion('${item}')">${item}</div>`
+            )
+            .join("");
+          suggestionsDiv.style.display = "block";
+        } else {
+          suggestionsDiv.innerHTML = "<div>No suggestions found</div>";
         }
-    
-        fetch(`http://localhost:8080/api/autocomplete?query=${query}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length > 0) {
-                    suggestionsDiv.innerHTML = data.map(item => `<div onclick="selectSuggestion('${item}')">${item}</div>`).join('');
-                    suggestionsDiv.style.display = "block";
-                } else {
-                    suggestionsDiv.innerHTML = "<div>No suggestions found</div>";
-                }
-            })
-            .catch(() => {
-                suggestionsDiv.innerHTML = "<div>Error fetching suggestions</div>";
-            });
-    }
-    
-    function selectSuggestion(suggestion) {
-        document.getElementById("searchBar").value = suggestion;
-        document.getElementById("suggestions").style.display = "none";
-    
-        // Optionally, trigger a search
-        renderPlans(suggestion);
-    }
-
-    
-    function redirectToPageRanking() {
-      // Redirect to PageRanking.html
-      window.location.href = 'PageRank.html';
+      })
+      .catch(() => {
+        suggestionsDiv.innerHTML = "<div>Error fetching suggestions</div>";
+      });
   }
 
-  
+  function selectSuggestion(suggestion) {
+    document.getElementById("searchBar").value = suggestion;
+    document.getElementById("suggestions").style.display = "none";
+
+    // Optionally, trigger a search
+    renderPlans(suggestion);
+  }
+
+  function redirectToPageRanking() {
+    // Redirect to PageRanking.html
+    window.location.href = "PageRank.html";
+  }
+
   function toggleExplorePopup() {
-    const popup = document.getElementById('explorePopup');
-    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    const popup = document.getElementById("explorePopup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+  }
+
+  // Function to navigate to the Web Crawler page
+  function navigateToWebCrawler() {
+    // Redirect to the webcrawler.html page
+    window.location.href = "WebCrawler.html";
+  }
 }
-
-}
-
-
-

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler</title>
+    <link rel="stylesheet" href="WebCrawlerStyles.css">
+</head>
+<body>
+    <h1>Web Crawler</h1>
+
+    <!-- Button to open the search bar -->
+    <button id="crawlButton">Crawl Website</button>
+
+    <!-- Search bar to enter the URL -->
+    <div id="searchBar">
+        <input type="text" id="urlInput" placeholder="Enter URL to crawl" />
+        <button onclick="crawlWebsite()">Crawl</button>
+    </div>
+
+    <!-- Display the results -->
+    <h3>Links found on the website:</h3>
+    <ul id="linksList"></ul>
+
+    <script src="WebCrawlerScript.js"></script>
+</body>
+</html>

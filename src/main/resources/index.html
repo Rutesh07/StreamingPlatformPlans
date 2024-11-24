@@ -38,9 +38,10 @@
     <div id="explorePopup" class="explore-popup">
         <ul>
             <li>Best Plan</li>
+            <li onclick="navigateToWebCrawler()">Web Crawler</li>
             <li>Text Extractor</li>
             <li>Search Frequency</li>
-            <li onclick="redirectToPageRanking()">Page Ranking</li> <!-- Redirect on click -->
+            <li onclick="redirectToPageRanking()">Page Ranking</li>
             <li>Frequency Count</li>
         </ul>
     </div>
@@ -54,6 +55,10 @@
         function redirectToPageRanking() {
             // Redirect to PageRanking.html
             window.location.href = 'PageRank.html';
+        }
+        function navigateToWebCrawler() {
+            // Redirect to the webcrawler.html page
+            window.location.href = "WebCrawler.html";
         }
     </script>
     <script src="script.js"></script>
