@@ -24,6 +24,12 @@ public class CsvController {
         return csvService.getPlans(platform); // Call service to get plans for the specified platform
     }
 
+    @GetMapping("/search")
+    public List<StreamingServicePlan> searchPlans(@RequestParam String query) {
+        return csvService.searchPlans(query);
+    }
+
+
     
  
 

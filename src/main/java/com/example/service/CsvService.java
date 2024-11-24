@@ -105,11 +105,12 @@ public class CsvService {
     public List<StreamingServicePlan> searchPlans(String query) {
         String lowerCaseQuery = query != null ? query.toLowerCase() : "";
         return plans.stream()
-                .filter(plan -> plan.getServiceName().toLowerCase().contains(lowerCaseQuery) ||
-                        plan.getPlanName().toLowerCase().contains(lowerCaseQuery) ||
-                        plan.getFeatures().toLowerCase().contains(lowerCaseQuery))
-                .collect(Collectors.toList());
+            .filter(plan -> plan.getServiceName().toLowerCase().contains(lowerCaseQuery) ||
+                    plan.getPlanName().toLowerCase().contains(lowerCaseQuery) ||
+                    plan.getFeatures().toLowerCase().contains(lowerCaseQuery))
+            .collect(Collectors.toList());
     }
+    
 
     // Get top 10 suggestions based on the query for autocomplete
     public List<String> getSuggestions(String query) {

@@ -178,20 +178,46 @@ function handleSearch(event) {
   }
 }
 
-// Attach event listeners to the search bar and search button
-document.querySelector(".search-bar").addEventListener("keydown", handleSearch);
-document
-  .querySelector(".search-button")
-  .addEventListener("click", handleSearch);
 
 
-  // Function to handle search when user hits 'Enter' in the search bar
-document.querySelector('.search-bar').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   document
+//     .getElementById("search-button")
+//     .addEventListener("click", handleSearch);
+
+//   document
+//     .getElementById("search-input")
+//     .addEventListener("keydown", function (event) {
+//       if (event.key === "Enter") handleSearch();
+//     });
+// });
+
+
+
+
+
+
+// Attach event listeners to search bar and search button
+const searchBar = document.querySelector(".search-bar");
+const searchButton = document.querySelector(".search-button");
+
+if (searchBar) {
+  searchBar.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
       const query = event.target.value.trim();
-      fetchSearchResults(query);
-  }
-});
+      if (query) fetchSearchResults(query);
+    }
+  });
+}
+
+if (searchButton) {
+  searchButton.addEventListener("click", () => {
+    const query = searchBar.value.trim();
+    if (query) fetchSearchResults(query);
+  });
+}
 
 // Function to fetch search results based on user input
 function fetchSearchResults(query) {
@@ -199,34 +225,39 @@ function fetchSearchResults(query) {
   container.innerHTML = "<p>Loading search results...</p>"; // Clear current content and show loading message
 
   fetch(`http://localhost:8080/api/search?query=${query}`)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-      })
-      .then(data => {
-          if (data.length === 0) {
-              container.innerHTML = `<p>No plans found for "${query}".</p>`;
-          } else {
-              container.innerHTML = data.map(plan => `
-                  <div class="plan-box">
-                      <h2>${plan.planName}</h2>
-                      <p><strong>Service:</strong> ${plan.serviceName}</p>
-                      <p><strong>Price:</strong> $${plan.price}</p>
-                      <p><strong>Annual Price:</strong> ${plan.annualPrice}</p>
-                      <p><strong>Features:</strong> ${plan.features}</p>
-                      <p><strong>Simultaneous Streams:</strong> ${plan.simultaneousStream}</p>
-                      <p><strong>Download:</strong> ${plan.download}</p>
-                      <p><strong>Ad-Free Streaming:</strong> ${plan.adFreeStreaming}</p>
-                  </div>
-              `).join('');
-          }
-      })
-      .catch(error => {
-          console.error('Error fetching search results:', error);
-          container.innerHTML = "<p>Error fetching search results. Please try again later.</p>";
-      });
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.length === 0) {
+        container.innerHTML = `<p>No plans found for "${query}".</p>`;
+      } else {
+        container.innerHTML = data
+          .map(
+            (plan) => `
+              <div class="plan-box">
+                  <h2>${plan.planName}</h2>
+                  <p><strong>Service:</strong> ${plan.serviceName}</p>
+                  <p><strong>Price:</strong> $${plan.price}</p>
+                  <p><strong>Annual Price:</strong> ${plan.annualPrice}</p>
+                  <p><strong>Features:</strong> ${plan.features}</p>
+                  <p><strong>Simultaneous Streams:</strong> ${plan.simultaneousStream}</p>
+                  <p><strong>Download:</strong> ${plan.download}</p>
+                  <p><strong>Ad-Free Streaming:</strong> ${plan.adFreeStreaming}</p>
+              </div>
+          `
+          )
+          .join("");
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching search results:", error);
+      container.innerHTML =
+        "<p>Error fetching search results. Please try again later.</p>";
+    });
 
 
 
