@@ -40,11 +40,22 @@
             <li>Best Plan</li>
             <li>Text Extractor</li>
             <li>Search Frequency</li>
-            <li>Page Ranking</li>
+            <li onclick="redirectToPageRanking()">Page Ranking</li> <!-- Redirect on click -->
             <li>Frequency Count</li>
         </ul>
     </div>
 
+    <script>
+        function toggleExplorePopup() {
+            const popup = document.getElementById('explorePopup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function redirectToPageRanking() {
+            // Redirect to PageRanking.html
+            window.location.href = 'PageRank.html';
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
