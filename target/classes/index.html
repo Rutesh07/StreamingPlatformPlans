@@ -42,7 +42,8 @@
             <li>Text Extractor</li>
             <li>Search Frequency</li>
             <li onclick="redirectToPageRanking()">Page Ranking</li>
-            <li>Frequency Count</li>
+            <li onclick="navigateToInvertedIndex()">Inverted Index</li>
+
         </ul>
     </div>
 
@@ -59,6 +60,10 @@
         function navigateToWebCrawler() {
             // Redirect to the webcrawler.html page
             window.location.href = "WebCrawler.html";
+        }
+
+        function navigateToInvertedIndex() {
+            window.location.href = "invertedIndex.html";
         }
     </script>
     <script src="script.js"></script>

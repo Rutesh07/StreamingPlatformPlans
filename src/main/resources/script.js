@@ -290,4 +290,8 @@ function fetchSearchResults(query) {
     // Redirect to the webcrawler.html page
     window.location.href = "WebCrawler.html";
   }
+
+  function navigateToInvertedIndex() {
+    window.location.href = "invertedIndex.html";
+  }
 }

@@ -1,0 +1,96 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Container for centering the content */
+.container {
+    max-width: 900px; /* Increased max-width to fit longer results */
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Search bar container */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the search input field */
+#searchWord {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Styling for the search button */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Results container */
+#output {
+    margin-top: 20px;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Ensures wrapping of long words */
+}
+
+/* Results list styling */
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual result item styling */
+.results-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for the links in results */
+.results-list li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Hover effect for result links */
+.results-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Add a loading state */
+#output.loading::before {
+    content: "Loading...";
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
