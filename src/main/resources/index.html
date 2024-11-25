@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streaming Platforms Pricing</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -42,8 +40,8 @@
             <li>Text Extractor</li>
             <li>Search Frequency</li>
             <li onclick="redirectToPageRanking()">Page Ranking</li>
+            <li onclick="redirectToFrequencyCount()">Frequency Count</li>
             <li onclick="navigateToInvertedIndex()">Inverted Index</li>
-
         </ul>
     </div>
 
@@ -54,19 +52,21 @@
         }
 
         function redirectToPageRanking() {
-            // Redirect to PageRanking.html
             window.location.href = 'PageRank.html';
         }
+
         function navigateToWebCrawler() {
-            // Redirect to the webcrawler.html page
             window.location.href = "WebCrawler.html";
         }
 
         function navigateToInvertedIndex() {
             window.location.href = "invertedIndex.html";
         }
+
+        function redirectToFrequencyCount(){
+            window.location.href = "FrequencyCount.html";
+        }
     </script>
     <script src="script.js"></script>
 </body>
-
 </html>

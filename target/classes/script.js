@@ -294,4 +294,8 @@ function fetchSearchResults(query) {
   function navigateToInvertedIndex() {
     window.location.href = "invertedIndex.html";
   }
+
+  function redirectToFrequencyCount() {
+    window.location.href = "FrequencyCount.html";
+  }
 }
