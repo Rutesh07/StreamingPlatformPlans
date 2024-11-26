@@ -37,7 +37,7 @@
         <ul>
             <li>Best Plan</li>
             <li onclick="navigateToWebCrawler()">Web Crawler</li>
-            <li>Text Extractor</li>
+            <li onclick="redirectToTextExtractor()">Text Extractor</li>
             <li>Search Frequency</li>
             <li onclick="redirectToPageRanking()">Page Ranking</li>
             <li onclick="redirectToFrequencyCount()">Frequency Count</li>
@@ -65,6 +65,10 @@
 
         function redirectToFrequencyCount(){
             window.location.href = "FrequencyCount.html";
+        }
+
+        function redirectToTextExtractor(){
+            window.location.href = "TextExtractor.html"
         }
     </script>
     <script src="script.js"></script>

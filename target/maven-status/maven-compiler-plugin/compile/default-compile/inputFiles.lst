@@ -1,7 +1,9 @@
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\InvertedIndexController.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\model\Occurrence.java
+D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\TextExtractorController.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\model\StreamingServicePlan.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\InvertedIndexService.java
+D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\TextExtractorService.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\MyCorsFilter.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\FinalProjectApplication.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\model\PageContent.java
@@ -11,8 +13,10 @@ D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\fi
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\model\TrieNode.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\CsvController.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\SearchHistoryService.java
+D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\FrequencyController.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\model\AVLTree.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\BestPlanService.java
+D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\FrequencyService.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\GreetingController.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\service\CsvService.java
 D:\Rutesh\University\Computing concepts\Final Project\Final_Project_GUI_Plans\final_project\src\main\java\com\example\controller\StreamingServiceController.java

@@ -298,4 +298,8 @@ function fetchSearchResults(query) {
   function redirectToFrequencyCount() {
     window.location.href = "FrequencyCount.html";
   }
+
+  function redirectToTextExtractor(){
+    window.location.href = "TextExtractor.html"
+}
 }
