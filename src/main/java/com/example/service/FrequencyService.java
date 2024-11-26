@@ -16,6 +16,9 @@ import com.opencsv.exceptions.CsvValidationException;
 @Service
 public class FrequencyService {
 
+    // Track search query frequencies
+    private final Map<String, Integer> searchFrequencyMap = new HashMap<>();
+
     public List<Entry<String, Integer>> calculateFrequency(String filePath, int topN) {
         Map<String, Integer> frequencyMap = new HashMap<>();
 
@@ -36,7 +39,8 @@ public class FrequencyService {
 
         // Sort the words by frequency
         List<Entry<String, Integer>> sortedList = new ArrayList<>(frequencyMap.entrySet());
-        sortedList.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue())); // Sort by descending frequency
+        sortedList.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue())); // Sort by descending
+                                                                                             // frequency
 
         // Get the top N words
         return sortedList.subList(0, Math.min(topN, sortedList.size()));
@@ -50,5 +54,21 @@ public class FrequencyService {
                 frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
             }
         }
+    }
+
+    // Track and update search query frequencies
+    public int trackSearchFrequency(String searchTerm) {
+        searchTerm = searchTerm.toLowerCase(); // Normalize for case-insensitivity
+        int updatedCount = searchFrequencyMap.getOrDefault(searchTerm, 0) + 1;
+        searchFrequencyMap.put(searchTerm, updatedCount);
+        return updatedCount;
+    }
+
+    // Retrieve search frequencies
+    public List<Entry<String, Integer>> getSearchFrequencies() {
+        List<Entry<String, Integer>> sortedList = new ArrayList<>(searchFrequencyMap.entrySet());
+        sortedList.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue())); // Sort by descending
+                                                                                             // frequency
+        return sortedList;
     }
 }

@@ -18,7 +18,16 @@ public class FrequencyController {
     public List<Entry<String, Integer>> getFrequencyCount(
             @RequestParam String filePath,
             @RequestParam(defaultValue = "10") int topN) {
-        // Call the service to calculate frequency
         return frequencyService.calculateFrequency(filePath, topN);
+    }
+
+    @PostMapping("/track")
+    public int trackSearchFrequency(@RequestParam String searchTerm) {
+        return frequencyService.trackSearchFrequency(searchTerm);
+    }
+
+    @GetMapping("/search-frequency")
+    public List<Entry<String, Integer>> getSearchFrequencies() {
+        return frequencyService.getSearchFrequencies();
     }
 }

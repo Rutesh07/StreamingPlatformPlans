@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streaming Platforms Pricing</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -38,12 +40,12 @@
             <li>Best Plan</li>
             <li onclick="navigateToWebCrawler()">Web Crawler</li>
             <li onclick="redirectToTextExtractor()">Text Extractor</li>
-            <li>Search Frequency</li>
             <li onclick="redirectToPageRanking()">Page Ranking</li>
             <li onclick="redirectToFrequencyCount()">Frequency Count</li>
             <li onclick="navigateToInvertedIndex()">Inverted Index</li>
         </ul>
     </div>
+
 
     <script>
         function toggleExplorePopup() {
@@ -63,14 +65,19 @@
             window.location.href = "invertedIndex.html";
         }
 
-        function redirectToFrequencyCount(){
+        function redirectToFrequencyCount() {
             window.location.href = "FrequencyCount.html";
         }
 
-        function redirectToTextExtractor(){
+        function redirectToSearchFrequency() {
+            window.location.href = "SearchFrequency.html";  // Redirects to the Search Frequency page
+        }
+
+        function redirectToTextExtractor() {
             window.location.href = "TextExtractor.html"
         }
     </script>
     <script src="script.js"></script>
 </body>
+
 </html>
