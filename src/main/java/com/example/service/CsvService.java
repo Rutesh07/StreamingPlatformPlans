@@ -158,7 +158,7 @@ public class CsvService {
         List<PageContent> webPages = new ArrayList<>();
         Set<String> uniqueUrls = new HashSet<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/All_Websites.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/Crawled_Website_Data.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",", 2);
