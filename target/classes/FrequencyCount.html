@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequency Count</title>
     <link rel="stylesheet" href="FrequencyCountStyles.css">
 </head>
+
 <body>
     <!-- Frequency Count Section -->
     <div id="frequency-count-section" class="frequency-count-container">
         <h2>Frequency Count</h2>
-        
-        <!-- Horizontal Layout for Input and Button -->
+
+        <!-- Horizontal Layout for Input and Buttons -->
         <div class="input-container">
-            <input type="text" id="word-input" placeholder="Enter word to check frequency" />
-            <button class="analyze-btn" onclick="checkFrequency()">Frequency Count</button>
-            <button class="analyze-btn" onclick="showSearchFrequencies()">Search Frequency</button>
-          </div>
-          <div id="frequency-result"></div>          
+            <input type="text" id="word-input" placeholder="Enter word to search">
+            <button id="check-frequency-button" class="analyze-btn">Check Frequency</button>
+            <button id="show-frequency-button" class="analyze-btn">Search Frequencies</button>
+        </div>
+
+        <!-- Result Containers -->
+        <div id="frequency-result"></div>
+        <div id="search-frequency-result"></div>
+    </div>
 
     <script src="FrequncyCount.js"></script>
 </body>
+
 </html>

@@ -15,7 +15,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class TextExtractorService {
 
     /**
-     * Extracts text from the uploaded file and processes it to categorize data like emails, phone numbers, URLs, and dates.
+     * Extracts text from the uploaded file and processes it to categorize data like
+     * emails, phone numbers, URLs, and dates.
      *
      * @param domain The domain for which the text is being extracted.
      * @param file   The uploaded file containing text.
@@ -83,25 +84,25 @@ public class TextExtractorService {
             structuredOutput.append(email).append("\n");
         }
 
-        structuredOutput.append("\nPhone Numbers:\n");
-        structuredOutput.append("Valid:\n");
-        for (String phone : validPhones) {
-            structuredOutput.append(phone).append("\n");
-        }
-        structuredOutput.append("Invalid:\n");
-        for (String phone : invalidPhones) {
-            structuredOutput.append(phone).append("\n");
-        }
+        // structuredOutput.append("\nPhone Numbers:\n");
+        // structuredOutput.append("Valid:\n");
+        // for (String phone : validPhones) {
+        // structuredOutput.append(phone).append("\n");
+        // }
+        // structuredOutput.append("Invalid:\n");
+        // for (String phone : invalidPhones) {
+        // structuredOutput.append(phone).append("\n");
+        // }
 
-        structuredOutput.append("\nURLs:\n");
-        for (String url : urls) {
-            structuredOutput.append(url).append("\n");
-        }
+        // structuredOutput.append("\nURLs:\n");
+        // for (String url : urls) {
+        // structuredOutput.append(url).append("\n");
+        // }
 
-        structuredOutput.append("\nDates:\n");
-        for (String date : dates) {
-            structuredOutput.append(date).append("\n");
-        }
+        // structuredOutput.append("\nDates:\n");
+        // for (String date : dates) {
+        // structuredOutput.append(date).append("\n");
+        // }
 
         return structuredOutput.toString();
     }
